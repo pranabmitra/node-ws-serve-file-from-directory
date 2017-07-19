@@ -1,0 +1,31 @@
+
+<html>
+    <head>
+        <title>The Socket Server</title>
+            <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.4/jquery.min.js"></script>
+            </head>
+        </title>
+    </head>
+    <body>
+        <h1>The Communication with Socket</h1>
+        <br />
+        <ul id="dvMessage"> </ul>
+
+        <script>
+            $(document).ready(function(){
+                var ws = new WebSocket("ws://192.168.1.112:9001");
+                ws.binaryType = 'arraybuffer';
+                ws.onmessage = function(evt){
+                    console.log(evt.data);
+
+                    if (evt.data.byteLength) {
+                        var byteData = new Uint8Array(evt.data);
+                        $('#dvMessage').append($("<li>").text(byteData));
+                    } else {
+                        $('#dvMessage').append($("<li>").text(evt.data));
+                    }
+                };
+            });
+        </script>
+    </body>
+</html>
