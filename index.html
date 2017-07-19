@@ -13,7 +13,7 @@
 
         <script>
             $(document).ready(function(){
-                var ws = new WebSocket("ws://192.168.1.112:9001");
+                var ws = new WebSocket("ws://127.0.0.1:9001");
                 ws.binaryType = 'arraybuffer';
                 ws.onmessage = function(evt){
                     console.log(evt.data);
