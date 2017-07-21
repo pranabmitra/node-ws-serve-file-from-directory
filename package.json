@@ -1,0 +1,23 @@
+{
+  "name": "node-ws-serve-file-from-directory",
+  "version": "1.0.0",
+  "description": "",
+  "main": "ws_server.js",
+  "dependencies": {
+    "ws": "^3.0.0"
+  },
+  "devDependencies": {},
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/pranabmitra/node-ws-serve-file-from-directory.git"
+  },
+  "author": "pranab",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/pranabmitra/node-ws-serve-file-from-directory/issues"
+  },
+  "homepage": "https://github.com/pranabmitra/node-ws-serve-file-from-directory#readme"
+}
